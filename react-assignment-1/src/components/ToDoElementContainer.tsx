@@ -21,7 +21,8 @@ const ToDoElementContainer = () => {
     }
 
     const delToDo: (id: number) => void = (id: number): void => {
-        settodos(todos.filter(unit => unit.id != id));
+        const operatedTodos = todos.filter(unit => unit.id != id)
+        settodos(operatedTodos);
     }
 
     const chnageStatus: (id: number) => void = (id: number): void => {
