@@ -25,27 +25,29 @@ const ToDoElementContainer = () => {
     }
 
     const chnageStatus: (id: number) => void = (id: number): void => {
-        settodos(todos.map((unit: Todo) => {
-            if (unit.id === id) {
-                if (unit.done === "Pending") {
-                    const newtodo: Todo = {...unit, done: "Complete"}
-                    return newtodo
+        const operatedTodos = todos.map((unit: Todo) => {
+                if (unit.id === id) {
+                    if (unit.done === "Pending") {
+                        const newtodo: Todo = {...unit, done: "Complete"}
+                        return newtodo
+                    } else {
+                        const newtodo: Todo = {...unit, done: "Pending"}
+                        return newtodo
+                    }
                 } else {
-                    const newtodo: Todo = {...unit, done: "Pending"}
-                    return newtodo
+                    return unit;
                 }
-            } else {
-                return unit;
-            }
-        }));
+            },
+        )
+        settodos(operatedTodos)
+        ;
     }
 
     return (
         <div>
-            <h1>Todo Application</h1><br/>
+            <h1>Todo Application</h1>
             <ToDoForm addToDo={addToDo} settodo={settodo} todo={todo}/>
-            <br/><h2>My Todos</h2>
-            <br/>
+            <h2>My Todos</h2>
             <ToDoList chnageStatus={chnageStatus} delToDo={delToDo} todos={todos}></ToDoList>
         </div>
     )
