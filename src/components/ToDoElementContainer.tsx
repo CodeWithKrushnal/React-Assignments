@@ -45,8 +45,8 @@ const ToDoElementContainer = () => {
     }
 
     return (
-        <div>
-            <h1>Todo Application</h1>
+        <div className="flex flex-col items-center justify-center min-h-screen">
+            <h1 className="text-center scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl py-10">Todo Application</h1>
             <ToDoForm addToDo={addToDo} settodo={settodo} todo={todo}/>
             <h2>My Todos</h2>
             <ToDoList chnageStatus={chnageStatus} delToDo={delToDo} todos={todos}></ToDoList>
