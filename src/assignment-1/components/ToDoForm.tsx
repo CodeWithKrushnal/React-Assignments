@@ -1,5 +1,5 @@
-import {Input} from "@/components/ui/input.tsx";
-import {Button} from "@/components/ui/button.tsx";
+import {Input} from "@/assignment-1/components/ui/input.tsx";
+import {Button} from "@/assignment-1/components/ui/button.tsx";
 
 interface ToDoFormProps {
     addToDo: () => void,

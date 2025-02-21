@@ -1,7 +1,7 @@
 import {useState} from "react";
-import ToDoForm from "@/components/ToDoForm";
-import ToDoList from "@/components/ToDoList";
-import {Todo} from "@/types/todo";
+import ToDoForm from "@/assignment-1/components/ToDoForm.tsx";
+import ToDoList from "@/assignment-1/components/ToDoList.tsx";
+import {Todo} from "@/assignment-1/types/todo.ts";
 
 const ToDoElementContainer = () => {
     const [todo, settodo] = useState<string>("")
